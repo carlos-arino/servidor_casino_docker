@@ -9,7 +9,7 @@ COPY main.py .
 
 # (Opcional) Si tuvieras dependencias:
 COPY requirements.txt .
-RUN pip install paho-mqtt
+RUN pip install paho-mqtt==1.6.1
 
 # Ejecutamos el script
 # -u : Unbuffered (crítico para ver logs en Docker al instante)
