@@ -8,8 +8,8 @@ WORKDIR /app
 COPY main.py .
 
 # (Opcional) Si tuvieras dependencias:
-# COPY requirements.txt .
-# RUN pip install -r requirements.txt
+COPY requirements.txt .
+RUN pip install -r requirements.txt
 
 # Ejecutamos el script
 # -u : Unbuffered (crítico para ver logs en Docker al instante)
