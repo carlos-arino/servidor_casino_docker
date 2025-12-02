@@ -8,18 +8,14 @@ services:
     # Nombre amigable para identificar el contenedor
     container_name: servidor-casino-v1
     
-    # POLÕTICA DE REINICIO:
+    # POL√çTICA DE REINICIO:
     # "unless-stopped": Se reinicia siempre (error, reboot del PC),
-    # a menos que t˙ ejecutes "docker-compose down" explÌcitamente.
+    # a menos que t√∫ ejecutes "docker-compose down" expl√≠citamente.
     restart: unless-stopped
     
-    # (Opcional pero recomendado) Vol˙menes:
+    # (Opcional pero recomendado) Vol√∫menes:
     # Esto "conecta" tu archivo local con el del contenedor.
     # Si editas el script en tu PC, los cambios se aplican al reiniciar
     # el contenedor sin tener que reconstruir la imagen.
     volumes:
       - ./main.py:/app/main.py
-
-    # (Opcional) Variables de entorno si tu script las necesita
-    environment:
-      - MI_VARIABLE=hola_mundo
