@@ -12,5 +12,5 @@ COPY main.py .
 # RUN pip install -r requirements.txt
 
 # Ejecutamos el script
-# -u : Unbuffered (crítico para ver logs en Docker al instante)
-CMD ["python", "-u", "main.py"]
+# -u : Unbuffered (crÃ­tico para ver logs en Docker al instante)
+CMD ["python", "-u", "main.py"] 
