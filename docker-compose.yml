@@ -13,9 +13,4 @@ services:
     # a menos que tú ejecutes "docker-compose down" explícitamente.
     restart: unless-stopped
     
-    # (Opcional pero recomendado) Volúmenes:
-    # Esto "conecta" tu archivo local con el del contenedor.
-    # Si editas el script en tu PC, los cambios se aplican al reiniciar
-    # el contenedor sin tener que reconstruir la imagen.
-    volumes:
-      - ./main.py:/app/main.py
+
