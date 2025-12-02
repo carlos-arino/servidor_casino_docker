@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  servidor-casino:
+    # Construye la imagen usando el Dockerfile de la carpeta actual
+    build: . 
+    
+    # Nombre amigable para identificar el contenedor
+    container_name: servidor-casino-v1
+    
+    # POLÍTICA DE REINICIO:
+    # "unless-stopped": Se reinicia siempre (error, reboot del PC),
+    # a menos que tú ejecutes "docker-compose down" explícitamente.
+    restart: unless-stopped
+    
+    # (Opcional pero recomendado) Volúmenes:
+    # Esto "conecta" tu archivo local con el del contenedor.
+    # Si editas el script en tu PC, los cambios se aplican al reiniciar
+    # el contenedor sin tener que reconstruir la imagen.
+    volumes:
+      - ./main.py:/app/main.py
+
+    # (Opcional) Variables de entorno si tu script las necesita
+    environment:
+      - MI_VARIABLE=hola_mundo
